@@ -5,11 +5,13 @@ import { CardDetails } from '../../common/models';
 
 const checkboxId = '#accept-checkbox';
 const checkboxLabelId = '#checkbox-label';
+const storeSelector = $('#store-selector');
+const cardNumberInput = $('#card-number');
 
 
 export async function addCard() {
-    const store = $(constants.store).val() as string;
-    const cardNumber = $(constants.cardNumber).val() as string;
+    const store = storeSelector.val() as string;
+    const cardNumber = cardNumberInput.val() as string;
     const validationResult = validateStoreAndCard(store, cardNumber);
     const checkbox = $(checkboxId);
     const checkboxLabel = $(checkboxLabelId);

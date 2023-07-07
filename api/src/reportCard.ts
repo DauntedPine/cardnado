@@ -34,7 +34,7 @@ export async function reportCard(request: HttpRequest, context: InvocationContex
 }
 
 app.http('reportCard', {
-    methods: ['PATCH'],
+    methods: ['POST'],
     authLevel: 'anonymous',
     handler: reportCard
 });
